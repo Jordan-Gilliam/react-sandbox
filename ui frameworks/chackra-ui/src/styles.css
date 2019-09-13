@@ -1,0 +1,9 @@
+.App {
+  font-family: Menlo, monospace;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
