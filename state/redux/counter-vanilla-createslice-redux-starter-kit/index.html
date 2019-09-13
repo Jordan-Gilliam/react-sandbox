@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux basic example</title>
+    <script src="https://unpkg.com/redux-starter-kit@latest/dist/redux-starter-kit.umd.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        Clicked: <span id="value">0</span> times
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+        <button id="incrementIfOdd">Increment if odd</button>
+        <button id="incrementAsync">Increment async</button>
+      </p>
+    </div>
+    <script>
+      const RSK = window.RSK;
+
+      const counterSlice = RSK.createSlice({
+        initialState: 0,
+        reducers: {
+          increment: state => state + 1,
+          decrement: state => state - 1
+        }        
+      });
+
+      const {increment, decrement} = counterSlice.actions;
+
+      const store = RSK.configureStore({ reducer: counterSlice.reducer });
+      const valueEl = document.getElementById("value");
+
+      function render() {
+        valueEl.innerHTML = store.getState().toString();
+      }
+
+      render();
+      store.subscribe(render);
+
+      document
+        .getElementById("increment")
+        .addEventListener("click", function() {
+          store.dispatch(increment());
+        });
+
+      document
+        .getElementById("decrement")
+        .addEventListener("click", function() {
+          store.dispatch(decrement());
+        });
+
+      document
+        .getElementById("incrementIfOdd")
+        .addEventListener("click", function() {
+          if (store.getState() % 2 !== 0) {
+            store.dispatch(increment());
+          }
+        });
+
+      document
+        .getElementById("incrementAsync")
+        .addEventListener("click", function() {
+          setTimeout(function() {
+            store.dispatch(increment());
+          }, 1000);
+        });
+    </script>
+  </body>
+</html>
