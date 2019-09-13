@@ -1,6 +1,6 @@
 # React Sandbox
 
-<img src="/Users/nolansym/Downloads/react.svg" alt="react" style="zoom:10%;" />
+<img src="https://github.com/Jordan-Gilliam/readme-assets/blob/master/react.svg" width="250" alt="react" />
 
 ## Repo for versioning of react ecosystem prototypes
 
