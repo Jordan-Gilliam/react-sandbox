@@ -1,0 +1,32 @@
+{
+  "name": "statemanagement-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "antd": "3.9.2",
+    "apollo-boost": "0.1.16",
+    "graphql": "14.0.2",
+    "jest-dom": "^1.7.0",
+    "mobx": "5.1.0",
+    "mobx-react": "5.2.8",
+    "react": "16.5.0",
+    "react-apollo": "2.1.11",
+    "react-dom": "16.5.0",
+    "react-redux": "5.0.7",
+    "react-scripts": "1.1.5",
+    "react-testing-library": "5.0.1",
+    "redux": "4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "2.3.0",
+    "unstated": "2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watch --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
