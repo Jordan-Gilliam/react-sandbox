@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.elem {
+  height: 50px;
+  width: 50px;
+  border: 1px solid magenta;
+}
+
+.grab {
+  cursor: grab;
+}
+.grabbing {
+  cursor: grabbing;
+  border: 1px dotted;
+}
+.selectedEffect {
+  background: aqua;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+}
+
+.area {
+  width: 70%;
+  margin-left: 100px;
+  border: 1px dotted;
+}
